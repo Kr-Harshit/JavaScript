@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+}
+
+.clock {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+}
+
+.clock-face {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border: 10px solid #fff;
+    border-radius: 100%;
+}
+
+.time-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    width: 160px;
+    transform-origin: 0%;
+    transform: rotate(-90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); 
+    
+}
+
+.time-container:hover{
+    width: 220px;
+}
+
+.hand {
+    margin-right: 0;
+     border-radius:  100px 0 0 100px ;
+    background-color: #fff;
+    width: 130px;
+    border: 3px solid #fff;
+    transition: width 0.5s;
+}
+
+.time-container:hover .hand {
+    width: 180px;
+}
+
+.time {
+    /* visibility: hidden; */
+    opacity: 0;
+    border: 3px solid #fff;
+    width: 0px;
+    height: 40px;
+    border-radius: 100%;
+    transition: opacity 0.1s ease-in-out ;
+}
+
+.time-container:hover .time{
+    opacity : 1;
+    width: 40px;
+}
+
+.text{
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    padding: 7.5px;
+}
+
+
+#second:hover .hand {
+    border:3px solid blue;
+    background-color: blue;
+}
+#second:hover .time{
+  border:3px solid blue;
+}
